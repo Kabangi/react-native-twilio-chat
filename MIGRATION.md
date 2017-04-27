@@ -10,7 +10,7 @@ I believe this is complete -- but if you come across any issues please let us kn
  - In your Podfile, remove reference to TwilioIPMessagingClient, TwilioCommon, and RCTTwilioIPMessaging.
  - Add reference to TwilioChatClient: `pod 'TwilioChatClient', '~> 0.16.0'`
  - Add reference to TwilioAccessManager, if desired: `pod 'TwilioAccessManager', '~> 0.1.1'`
- - Add reference to RCTTwilioChat: `pod 'RCTTwilioChat', :path => '../node_modules/react-native-twilio-ip-messaging/ios'`
+ - Add reference to RCTTwilioChat: `pod 'RCTTwilioChat', :path => '../node_modules/react-native-twilio-chat/ios'`
  - Update your pod repositories with: `pod repo update`
  - Run `pod install` to perform the installation. This will remove the previous TwilioIPMessagingClient and TwilioCommon components and add the TwilioChatClient, RCTTwilioChat and optionally TwilioAccessManager.
 
@@ -20,7 +20,7 @@ I believe this is complete -- but if you come across any issues please let us kn
   - Update gradle.settins to use new Chat package:
   ```java
     include ':RCTTwilioChat', ':app'
-    project(':RCTTwilioChat').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-twilio-ip-messaging/android')
+    project(':RCTTwilioChat').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-twilio-chat/android')
   ```
  - Update build.gradle to compile new package: `compile project(':RCTTwilioChat')`
  - Update MainApplication.java to include new Chat package: 
