@@ -99,7 +99,7 @@
 				1DAE2D351D086CFD00D3FE06 /* RCTTwilioChatMessages.m */,
 			);
 			name = RCTTwilioChat;
-			path = RCTTwilioIPMessaging;
+			path = RCTTwilioChat;
 			sourceTree = "<group>";
 		};
 		9023DAF80145AA8BFFFD71CA /* Frameworks */ = {
@@ -137,7 +137,7 @@
 			dependencies = (
 			);
 			name = RCTTwilioChat;
-			productName = RCTTwilioIPMessaging;
+			productName = RCTTwilioChat;
 			productReference = 1DAE2D1E1D086CD600D3FE06 /* libRCTTwilioChat.a */;
 			productType = "com.apple.product-type.library.static";
 		};
