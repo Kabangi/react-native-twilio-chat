@@ -7,11 +7,11 @@
 //
 
 #import "RCTTwilioAccessManager.h"
-#import "RCTBridge.h"
+#import <React/RCTBridge.h>
 #import "RCTConvert+TwilioChatClient.h"
-#import "RCTUtils.h"
+#import <React/RCTUtils.h>
 #import "RCTTwilioChatClient.h"
-#import "RCTEventDispatcher.h"
+#import <React/RCTEventDispatcher.h>
 
 @interface RCTTwilioAccessManager() <TwilioAccessManagerDelegate>
 @end
