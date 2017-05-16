@@ -8,7 +8,6 @@
 
 #import "RCTTwilioChatClient.h"
 #import "RCTTwilioAccessManager.h"
-#import <React/RCTBridge.h>
 #import <React/RCTEventDispatcher.h>
 #import "RCTConvert+TwilioChatClient.h"
 #import <React/RCTUtils.h>
