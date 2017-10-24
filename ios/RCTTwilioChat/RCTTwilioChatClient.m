@@ -153,7 +153,7 @@ RCT_REMAP_METHOD(setAttributes, attributes:(NSDictionary *)attributes attributes
 
 #pragma mark Twilio IP Messaging Client Delegates
 
-- (void)chatClient:(TwilioChatClient *)client connectionStateChanged:(TCHClientConnectionState)state {
+- (void)chatClient:(TwilioChatClient *)client connectionStateUpdated:(TCHClientConnectionState)state {
     [self.bridge.eventDispatcher sendAppEventWithName:@"chatClient:connectionStateChanged"
                                                  body:@(state)];
 }
