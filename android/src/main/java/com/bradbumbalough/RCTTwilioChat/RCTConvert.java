@@ -34,6 +34,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Calendar;
+import java.text.SimpleDateFormat;
+import java.text.Format;
 
 public class RCTConvert {
 
@@ -220,16 +222,17 @@ public class RCTConvert {
     public static WritableMap ChannelDescriptor(ChannelDescriptor channel) {
         WritableMap map = Arguments.createMap();
 
+        Format formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         map.putString("sid", channel.getSid());
         map.putString("friendlyName", channel.getFriendlyName());
         map.putString("uniqueName", channel.getUniqueName());
         map.putMap("attributes", jsonToWritableMap(channel.getAttributes()));
         map.putInt("messagesCount", (int) channel.getMessagesCount());
         map.putInt("membersCount", (int) channel.getMembersCount());
-        map.putInt("unconsumedMessagesCount", channel.getUnconsumedMessagesCount().intValue());
-        map.putString("dateCreated", channel.getDateCreated().toString());
-        map.putString("dateUpdated", channel.getDateUpdated().toString());
-        map.putString("status", channel.getStatus().toString());
+        map.putInt("unconsumedMessagesCount", (int) channel.getUnconsumedMessagesCount());
+        map.putString("dateCreated", formatter.format(channel.getDateCreated()));
+        map.putString("dateUpdated", formatter.format(channel.getDateUpdated()));
+        map.putInt("status", channel.getStatus().getValue());
         map.putString("createdBy", channel.getCreatedBy());
         return map;
     }
