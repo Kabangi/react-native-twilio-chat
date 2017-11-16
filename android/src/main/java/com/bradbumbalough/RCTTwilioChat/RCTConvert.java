@@ -226,8 +226,10 @@ public class RCTConvert {
         map.putMap("attributes", jsonToWritableMap(channel.getAttributes()));
         map.putInt("messagesCount", (int) channel.getMessagesCount());
         map.putInt("membersCount", (int) channel.getMembersCount());
+        map.putInt("unconsumedMessagesCount", channel.getUnconsumedMessagesCount().intValue());
         map.putString("dateCreated", channel.getDateCreated().toString());
         map.putString("dateUpdated", channel.getDateUpdated().toString());
+        map.putString("status", channel.getStatus().toString());
         map.putString("createdBy", channel.getCreatedBy());
         return map;
     }
