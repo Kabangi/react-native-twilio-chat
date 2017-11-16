@@ -168,7 +168,7 @@ RCT_ENUM_CONVERTER(TCHClientConnectionState,(@{
              @"friendlyName": channel.friendlyName,
              @"uniqueName": channel.uniqueName,
              @"attributes": RCTNullIfNil(channel.attributes),
-             @"messageCount": @(channel.messagesCount),
+             @"messagesCount": @(channel.messagesCount),
              @"membersCount": @(channel.membersCount),
              @"dateCreated": @(channel.dateCreated.timeIntervalSince1970 * 1000),
              @"dateUpdated": @(channel.dateUpdated.timeIntervalSince1970 * 1000),
