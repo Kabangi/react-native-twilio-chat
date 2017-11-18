@@ -1,6 +1,6 @@
 {
   "name": "react-native-twilio-chat",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "A React Native wrapper for the Twilio Chat iOS and Android SDKs",
   "main": "lib/index.js",
   "scripts": {
