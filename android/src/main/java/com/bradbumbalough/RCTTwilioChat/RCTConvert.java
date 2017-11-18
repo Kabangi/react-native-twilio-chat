@@ -232,7 +232,7 @@ public class RCTConvert {
         map.putInt("unconsumedMessagesCount", (int) channel.getUnconsumedMessagesCount());
         map.putString("dateCreated", formatter.format(channel.getDateCreated()));
         map.putString("dateUpdated", formatter.format(channel.getDateUpdated()));
-        map.putInt("status", channel.getStatus().toString());
+        map.putString("status", channel.getStatus().toString());
         map.putString("createdBy", channel.getCreatedBy());
         return map;
     }
